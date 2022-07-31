@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kliky/screen/homescreen.dart';
 
+import 'connection/loginscreen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -30,7 +32,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Homescreenui(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => loginpage(),
+        '/home_page': (context) => Homescreenui(),
+      },
     );
   }
 }
